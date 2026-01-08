@@ -23,8 +23,8 @@ export function useAuthServices() {
     // build AuthSnapShot
     const snapshot: AuthSnapshot = {
       user: res.userInfo!,
-      agentInfo: res.agentInfo ?? undefined,
-      photographyCompanyInfo: res.photographyCompanyInfo ?? undefined
+      ...(res.agentInfo && { agentInfo: res.agentInfo }),
+      ...(res.photographyCompanyInfo && { photographyCompanyInfo: res.photographyCompanyInfo  })
     };
 
     // write AuthSnapShot to Jotai
