@@ -1,3 +1,7 @@
+/**
+ * API contract types
+ */
+
 export type LoginStatus = 
   "Success"
   | "UserNotFound"
@@ -52,4 +56,8 @@ export type LoginStatus =
   export interface LoginRequest {
     email: string;
     password: string;
+  }
+
+  export interface SignUpRequest {
+
   }
