@@ -74,7 +74,6 @@ export default function SignUpPage() {
             handleBlur,
             handleSubmit,
             isSubmitting,
-            /* and other goodies */
           }) => (
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="space-y-2">
@@ -230,7 +229,7 @@ export default function SignUpPage() {
               )}
 
               <Button type="submit" className="w-full" disabled={isSubmitting}>
-                Sign up
+                {isSubmitting ? "Signing up..." : "Sign up"}
               </Button>
 
               <div className="relative py-1">
